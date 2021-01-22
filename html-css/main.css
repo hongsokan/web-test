@@ -1,0 +1,172 @@
+body {
+    margin: 0px;
+  }
+  
+  header {
+    position: relative;
+    top: 0px;
+    width: 100%;
+    height: 10vh; /* 뷰포트의 너비값과 높이값의 % */
+    background-color: brown;
+  }
+  
+  /* --------- main ---------- */
+  nav {
+    position: relative;
+    top: 0px;
+    width: 80%;
+    margin: 0px auto;
+    height: 100%;
+    background-color: white;
+
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .menu1, .menu2, .menu3, .menu4, .menu5 {
+    width: 180px;
+    margin: 10px;
+    background-color: orangered;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .menu2:hover {
+      background-color: white;
+  }
+
+  .menu3:active {
+      background-color: red;
+  }
+  
+  /* --------- main ---------- */
+  main {
+    top: 0px;
+    width: 100%;
+    background-color: lightgray;
+  }
+  
+  main section {
+    border: 1px solid black;
+    width: 1000px;
+    height: 200px;
+    margin: 10px ;
+    /* padding: 100px; */
+    overflow: hidden;
+
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+  }
+
+  .section1 {
+    height: 500px;
+    background-image: url("./img/office.jpg");
+    background-size: cover;
+    /* background-size: cover; */
+    background-repeat: no-repeat;
+  }
+  
+  .notice_background {
+      position: relative;
+      left: 300px;
+      width: 200px;
+      height: 200px;
+      background-color: white;
+      z-index: 3;
+  }
+
+  .office-info {
+    vertical-align: middle;
+  }
+
+ .image {
+      width: 100px;
+      border: 1px solid black;
+      border-radius: 50%;
+  }
+
+  .image:hover {
+      transform: scale(2);
+      transition-duration: 1s;
+  }
+
+  .section4 form {
+      width: 100%;
+      height: 100%;
+      text-align: left;
+  }
+
+  .section5 table {
+      border: 1px solid black;
+  }
+
+
+  
+  /* --------- footer ---------- */
+  footer {
+    position: relative;
+    top: 0px;
+    width: 100%;
+    height: 5vh;
+    background-color: green;
+  }
+  
+
+
+
+
+  /* 모바일 Device : 0 ~ 640 */
+@media all and (max-width: 640px){
+    main {
+        /* background: red; */
+    }
+
+    header {
+        display: none;
+    }
+}
+ 
+/* Tablet Device : 641 ~ 768 */
+@media all and (min-width:641px){
+    main {
+        /* background: green; */
+    }
+
+    nav {
+        display: none;
+    }
+}
+ 
+/* Desktop Device : 1024 이상 */
+@media all and (min-width:1024px){
+    main {
+        /* background: blue; */
+    }
+
+    nav {
+        display: flex;
+    }
+}
+
+
+.notice_background {
+    animation-name: myanimation;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+}
+
+
+/* 애니메이션 */
+@keyframes myanimation{
+    from{
+        background-color: white;
+        color: black;
+    }
+
+    to{
+        background-color: transparent;
+        color:transparent;
+    }
+}
