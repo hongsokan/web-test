@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div>getElementsByTagName</div>
+    <ol>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ol>
+
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+    <script>
+        var lis = document.getElementsByTagName('li');
+        for (var i = 0; i < lis.length; i++) {
+            lis[i].style.color = 'red';
+        }
+
+        var ul = document.getElementsByTagName('ul')[0];
+        var lis = ul.getElementsByTagName('li');
+        for (var i = 0; lis.length; i++) {
+            lis[i].style.color = 'blue';
+        }
+    </script>
+
+
+    <div>getElementsByClassName</div>
+    <ul>
+        <li>HTML</li>
+        <li class="active">CSS</li>
+        <li class="active">JavaScript</li>
+    </ul>
+    <script>
+        var lis = document.getElementsByClassName('active');
+        for (var i = 0; i < lis.length; i++) {
+            lis[i].style.color = 'red';
+        }
+    </script>
+
+
+    <div>getElementById</div>
+    <ul>
+        <li>HTML</li>
+        <li id="active">CSS</li>
+        <li>JavaScript</li>
+    </ul>
+
+    <script>
+        var li = document.getElementById('active');
+        li.style.color = 'green';
+    </script>
+
+
+    <div>querySelector</div>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+    <ol>
+        <li>HTML</li>
+        <li class="query">CSS</li>
+        <li>JavaScript</li>
+    </ol>
+
+    <script>
+        var qli = document.querySelector('li');
+        qli.style.color = 'red';
+        var qli = document.querySelector('.query');
+        qli.style.color = 'yellow';
+    </script>
+
+
+    <div>queryAll</div>
+    <div class="qAll">
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ul>
+        <ol>
+            <li>HTML</li>
+            <li class="active">CSS</li>
+            <li>JavaScript</li>
+        </ol>
+    </div>
+    <script>
+        var lis = document.querySelectorAll('.qAll');
+        for (var name in lis) {
+            lis[name].style.color = 'blue';
+        }
+    </script>
+</body>
+
+</html>
