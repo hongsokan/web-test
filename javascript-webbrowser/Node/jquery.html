@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous">
+        </script>
+
+
+    <!-- 추가 -->
+    <div class="target">
+        content1
+    </div>
+
+    <br>
+
+    <div class="target">
+        content2
+    </div>
+
+    <script>
+        $('.target').before('<div>before</div>');
+        $('.target').after('<div>after</div>');
+        $('.target').prepend('<div>prepend</div>');
+        $('.target').append('<div>append</div>');
+    </script>
+    <br><br><br><br>
+
+
+    <!-- 제거 -->
+    <div class="target1" id="target1">
+        target 1
+    </div>
+
+    <div class="target2" id="target2">
+        target 2
+    </div>
+
+    <input type="button" value="remove target 1" id="btn1" />
+    <input type="button" value="empty target 2" id="btn2" />
+
+    <script>
+        $('#btn1').click(function () {
+            $('#target1').remove();
+        })
+        $('#btn2').click(function () {
+            $('#target2').empty();
+        })
+    </script>
+    <br><br><br><br>
+
+
+    <!-- 변경 -->
+    <div class="target3" id="target3">
+        target 3
+    </div>
+     
+    <div class="target4" id="target4">
+        target 4
+    </div>
+     
+    <input type="button" value="replaceAll target 3" id="btn3" />
+    <input type="button" value="replaceWith target 4" id="btn4" />
+
+    <script>
+        $('#btn3').click(function(){
+            $('<div>replaceAll</div>').replaceAll('#target3'); // 제어대상을 인자로 전달
+        })
+        $('#btn4').click(function(){
+            $('#target4').replaceWith('<div>replaceWith</div>'); // 제어대상을 먼저 지정
+        })
+    </script>
+    <br><br><br><br>
+
+
+    <!-- 복제 -->
+    <div class="target5" id="target5">
+        target 5
+    </div>
+     
+    <div class="target6" id="target6">
+        target 6
+    </div>
+     
+    <div id="source">source</div>
+     
+    <input type="button" value="clone replaceAll target 5" id="btn5" />
+    <input type="button" value="clone replaceWith target 6" id="btn6" />
+
+    <script>
+        $('#btn5').click(function(){
+            $('#source').clone().replaceAll('#target5');
+        })
+        $('#btn6').click(function(){
+            $('#target6').replaceWith($('#source').clone());
+        })
+    </script>
+    <br><br><br><br>
+
+
+    <!-- 이동 -->
+    <div class="target" id="target7">
+        target 7
+    </div>
+     
+    <div id="source">source</div>
+     
+    <input type="button" value="append source to target 7" id="btn7" />
+
+    <script>
+        $('#btn7').click(function(){
+            $('#target7').append($('#source'));
+        })
+    </script>
+</body>
+
+</html>

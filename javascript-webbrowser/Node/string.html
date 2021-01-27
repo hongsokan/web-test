@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- innerHTML -->
+    <ul id="target1">
+        <li>HTML</li>
+        <li>CSS</li>
+    </ul>
+    <input type="button" onclick="get1();" value="get1" />
+    <input type="button" onclick="set1();" value="set1" />
+    <script>
+        function get1(){
+            var target = document.getElementById('target1');
+            alert(target.innerHTML);
+        }
+        function set1(){
+            var target = document.getElementById('target1');
+            target.innerHTML = "<li>JavaScript Core</li><li>BOM</li><li>DOM</li>";
+        }
+    </script>
+    <br><br>
+
+
+    <!-- outerHTML -->
+    <ul id="target2">
+        <li>HTML</li>
+        <li>CSS</li>
+    </ul>
+    <input type="button" onclick="get2();" value="get2" />
+    <input type="button" onclick="set2();" value="set2" />
+    <script>
+        function get2(){
+            var target = document.getElementById('target2');
+            alert(target.outerHTML);
+        }
+        function set2(){
+            var target = document.getElementById('target2');
+            target.outerHTML = "<ol><li>JavaScript Core</li><li>BOM</li><li>DOM</li></ol>";
+        }
+    </script>
+    <br><br>
+
+
+    <!-- innerText, outerText -->
+    <ul id="target3">
+        <li>HTML</li>
+        <li>CSS</li>
+    </ul>
+    <input type="button" onclick="get3();" value="get3" />
+    <input type="button" onclick="set3();" value="set3" />
+    <script>
+        function get3(){
+            var target = document.getElementById('target3');
+            alert(target.innerText);
+        }
+        function set3(){
+            var target = document.getElementById('target3');
+            target.innerText = "<li>JavaScript Core</li><li>BOM</li><li>DOM</li>";
+        }
+    </script>
+    <br><br>
+
+
+    <!-- insertAdjacentHTML() -->
+    <ul id="target4">
+        <li>CSS</li>
+    </ul>
+    <input type="button" onclick="beforebegin();" value="beforebegin" />
+    <input type="button" onclick="afterbegin();" value="afterbegin" />
+    <input type="button" onclick="beforeend();" value="beforeend" />
+    <input type="button" onclick="afterend();" value="afterend" />
+    <script>
+        function beforebegin(){
+            var target = document.getElementById('target4');
+            target.insertAdjacentHTML('beforebegin','<h1>Client Side</h1>');
+        }
+        function afterbegin(){
+            var target = document.getElementById('target4');
+            target.insertAdjacentHTML('afterbegin','<li>HTML</li>');
+        }
+        function beforeend(){
+            var target = document.getElementById('target4');
+            target.insertAdjacentHTML('beforeend','<li>JavaScript</li>');
+        }
+        function afterend(){
+            var target = document.getElementById('target4');
+            target.insertAdjacentHTML('afterend','<h1>Server Side</h1>');
+        }
+    </script>
+
+</body>
+</html>
