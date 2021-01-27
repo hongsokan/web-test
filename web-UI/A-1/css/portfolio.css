@@ -1,0 +1,131 @@
+@charset "utf-8";
+ 
+/* 모든 Device를 위한 공통 로드 */
+
+body {
+    font-family:  '나눔 고딕', 'NanumGothic', '돋움', 'Dotum', sans-serif;
+}
+
+/* body - header */
+body header {
+    width:100%;
+    background-color: black;
+    height: 120px;
+    vertical-align: middle;
+}
+
+body header .header-text {
+    color: white;
+    font-size: 40px;
+    line-height: 40px;
+}
+
+body .header-text, .contents {
+    max-width: 1000px;
+    padding: 40px;
+    margin: auto;
+}
+
+/* body - .contents - .menus */
+body .contents .menus {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+}
+
+.table-button, .form-button, .list-button {
+    background-color: transparent;
+    font: 16px #000;
+    border: 1px solid #d1d1d1;
+    height: 33px;
+    width: 324px;
+}
+
+.table-button:hover, .form-button:hover, .list-button:hover {
+    border-color: #454545;
+    font-weight: bold;
+}
+
+/* body - .contents - .elements-text */
+.elements-text {
+    height: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 20px;
+    border-bottom: 1px solid #454545;
+    margin-top: 40px;
+    padding-bottom: 20px;
+}
+ 
+/* body - .contents - contents-element(table,form,list) */
+.contents .contents-element {
+    border: 1px solid #d1d1d1;
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 30px;
+}
+
+/* body - .contents - .contents-header(table,form,list) - .contents-header */
+.contents .contents-header {
+    background-color: #f7f7f7;
+    height:100%;
+    font: 16px #333 bold;
+    line-height: 16px;
+    padding: 15px;
+    border-bottom: 1px solid #d1d1d1;
+}
+
+/* body - .contents - .contents-body(table,form,list) - .contents-body */
+.contents .contents-body {
+    font-size: 12px;
+    line-height: 12px;
+    padding: 30px;
+}
+
+/* body -  footer*/
+body footer {
+    width: 100%;
+    border-top: 1px solid #d1d1d1;
+    border-top-width: 100%;
+    padding: 30px;
+}
+
+body footer div {
+    text-align: center;
+}
+
+body footer .footer-address {
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 6px;
+}
+
+body footer .footer-copyright {
+    font-size: 12px;
+    color: #000;
+}
+
+
+/* Mobile Device : 0 ~ 640 */
+@media screen and (max-width: 640px) {
+    .device-status {
+        background: red;
+    }
+
+}
+ 
+/* Tablet Device : 641 ~ 768 */
+@media screen and (min-width:641px) {
+    .device-status {
+        background: green;
+    }
+
+}
+ 
+/* Desktop Device : 1024 이상 */
+@media screen and (min-width:1024px) {
+    .device-status {
+        background: blue;
+    }
+
+}

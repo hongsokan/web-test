@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="css/portfolio.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-text"><b>포트폴리오</b></div>
+    </header>
+
+    <section class="contents">
+        <div class="menus">
+            <input class="table-button" type="button" value="테이블 요소" onClick="location.href='#moveToTable'">
+            <input class="form-button" type="button" value="폼 요소" onClick="location.href='#moveToForm'">
+            <input class="list-button" type="button" value="리스트 요소" onClick="location.href='#moveToList'">
+        </div>
+
+        <div class="elements-text">구성 요소</div>
+
+        <a id="moveToTable">
+            <div class="contents-element">
+                <div class="contents-header"><b>테이블 요소</b></div>
+                <div class="contents-body">
+                    <!-- 콘텐츠 영역 -->
+                    <table class="table-kids">
+                        <!-- <thead> -->
+                            <caption class="table-title"><b>아동 사이즈</b></caption>
+                        <!-- </thead> -->
+                        <tbody>
+                            <tr class="table-category-row">
+                                <td colspan="2">구분</td>
+                                <td colspan="2">Small</td>
+                                <td colspan="2">Medium</td>
+                                <td colspan="2">Large</td>
+                                <td colspan="2">X-Large</td>
+                            </tr>
+
+                            <tr>
+                                <td class="table-category-column" rowspan="3">미국 남아<br>[Boys 2-7]</td>
+                                <td class="table-category-column">사이즈</td>
+                                <td>2T</td>
+                                <td>3T</td>
+                                <td>4T</td>
+                                <td>4</td>
+                                <td>5</td>
+                                <td>6</td>
+                                <td colspan="2">7</td>
+                            </tr>
+
+                            <tr>
+                                <td class="table-category-column">키</td>
+                                <td>84-91</td>
+                                <td>91-99</td>
+                                <td>91-99</td>
+                                <td>99-107</td>
+                                <td>107-114</td>
+                                <td>114-122</td>
+                                <td colspan="2">122-130</td>
+                            </tr>
+
+                            <tr>
+                                <td class="table-category-column">몸무게</td>
+                                <td>13-15</td>
+                                <td>14-15</td>
+                                <td>13-15</td>
+                                <td>14-15</td>
+                                <td>19-21</td>
+                                <td>20-23</td>
+                                <td colspan="2">23-25</td>
+                            </tr>
+
+                            <tr>
+                                <td class="table-category-column" rowspan="3">미국 여아<br>[Girls 2-6X]</td>
+                                <td class="table-category-column">사이즈</td>
+                                <td>2T</td>
+                                <td>3T</td>
+                                <td>4T</td>
+                                <td>4</td>
+                                <td>5</td>
+                                <td>6</td>
+                                <td colspan="2">6X</td>
+                            </tr>
+
+                            <tr>
+                                <td class="table-category-column">키</td>
+                                <td>84-91</td>
+                                <td>91-99</td>
+                                <td>91-99</td>
+                                <td>99-107</td>
+                                <td>107-114</td>
+                                <td>114-122</td>
+                                <td colspan="2">122-130</td>
+                            </tr>
+
+                            <tr>
+                                <td class="table-category-column">몸무게</td>
+                                <td>13-15</td>
+                                <td>14-15</td>
+                                <td>13-15</td>
+                                <td>14-15</td>
+                                <td>19-21</td>
+                                <td>20-23</td>
+                                <td colspan="2">23-25</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <table class="table-refund">
+                        <!-- <thead> -->
+                            <caption class="table-title"><b>환불 가능 금액 조회</b></caption>
+                        <!-- </thead> -->
+                        <tbody>
+                            <tr class="table-category-row">
+                                <td class="">구분</td>
+                                <td class="price">환불가능액</td>
+                                <td class="price">수수료</td>
+                                <td class="price">총 환불금액</td>
+                            </tr>
+
+                            <tr>
+                                <td>게임 보상금액</td>
+                                <td class="price">100,000원</td>
+                                <td class="price">1,000원</td>
+                                <td class="price">99,000원</td>
+                            </tr>
+
+                            <tr>
+                                <td>월정액제 보상금액</td>
+                                <td class="price">10,000원</td>
+                                <td class="price">5,000원</td>
+                                <td class="price">5,000원</td>
+                            </tr>
+
+                            <tr>
+                                <td>코인</td>
+                                <td class="price">9,000원</td>
+                                <td class="price">500원</td>
+                                <td class="price">8,500원</td>
+                            </tr>
+
+                            <tr class="table-total">
+                                <td>총합계</td>
+                                <td class="price">119,000원</td>
+                                <td class="price">6,500원</td>
+                                <td class="price">112,500원</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </a>
+
+        <a id="moveToForm">
+            <div class="contents-element">
+                <div class="contents-header"><b>폼 요소</b></div>
+                <div class="contents-body">
+                    <!-- 콘텐츠 영역 -->
+                    <div class="signup-title">회원가입</div>
+                    <div class="signup-form">
+                        <form name="signup">
+                            <p><b>아이디</b></p>
+                            <input type="text" placeholder="id">
+
+                            <p><b>비밀번호</b></p>
+                            <input type="text" placeholder="password">
+
+                            <p><b>이름</b></p>
+                            <input type="text" placeholder="name">
+
+                            <p><b>생년월일</b></p>
+                            <div class="birth-wrap">
+                                <div class="yy">
+                                    <select>
+                                        <option selected disabled hidden>년도</option>
+                                        <option>1981~1990</option>
+                                        <option>1991~2000</option>
+                                        <option>2001~2010</option>
+                                        <option>2011~2020</option>
+                                    </select>
+                                </div>
+                                <div class="mm">
+                                    <select>
+                                        <option selected disabled hidden>월</option>
+                                        <option>01~04</option>
+                                        <option>05~08</option>
+                                        <option>09~12</option>
+                                    </select>
+                                </div>
+                                <div class="dd">
+                                    <select>
+                                        <option selected disabled hidden>일</option>
+                                        <option>1~15</option>
+                                        <option>16~31</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <p><b>성별</b></p>
+                            <div class="gender-wrap">
+                                <input type="radio" name="gender" checked><span>남자</span>
+                                <input type="radio" name="gender"> <span>여자</span>
+                            </div>
+
+                            <p><b>이메일</b></p>
+                            <input type="text" placeholder="e-mail">
+
+                            <p><b>휴대전화</b></p>
+                            <div class="phone-wrap"> 
+                                <input class="phone" type="text" placeholder="phone">
+                                <input class="verify-button" type="button" value="인증번호 받기">
+                            </div>
+                            <input type="text" placeholder="인증번호">
+
+                            <p><b>취미</b></p>
+                            <div class="hobby-wrap">
+                                <span><input type="checkbox">운동</span>
+                                <span><input type="checkbox">요리</span>
+                                <span><input type="checkbox">여행</span>
+                                <span><input type="checkbox">게임</span>
+                                <span><input type="checkbox">컴퓨터</span>
+                                <span><input type="checkbox">음악</span>
+                                <span><input type="checkbox">영화</span>
+                                <span><input type="checkbox">독서</span>
+                            </div>
+
+                            <p><b>가입인사</b></p>
+                            <textarea class="greeting-text" rows="10"></textarea><br>
+                            <input class="submit-button" type="submit" value="가입하기">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <a id="moveToList">
+            <div class="contents-element">
+                <div class="contents-header"><b>리스트 요소</b></div>
+                <div class="contents-body">
+                    <!-- 콘텐츠 영역 -->
+                    <div class="list-wrap">
+                        <p><b>'프로젝트' 사전 검색 결과</b></p>
+                        <div class="search-wrap">
+                            <div class="search-result">
+                                <p class="title">프로젝트</p>
+                                <p class="result">
+                                    <span class="result-title">
+                                        프로젝트
+                                    </span>
+                                    <span class="result-category">
+                                        영양학사전
+                                    </span>
+                                    <p class="result-content">
+                                        연구나 새로운 사업의 개발을 위한 유기적이고 조직적인 계획. 
+                                        원자력 개발이나 우주개발 등은 대형 프로젝트를 조직하여 이루어진다. 
+                                        일반적으로는 특정한 목표, 계획을 위한 학습활동, 실행계획 등을 가리킨다.
+                                    </p>
+                                </p>
+
+                                <p class="result">
+                                    <span class="result-title">
+                                        프로젝트
+                                    </span>
+                                    <span class="result-category">
+                                        Basic 중학생을 위한 기술, 가정 용어사전
+                                    </span>
+                                    <p class="result-content">
+                                        어떤 특정한 목적 달성을 위하여 실시되는 시스템 개발, 프로그램 설계, 연구 개발 계획 혹은 건설 공사 등과 같이 한 번에 그치는 성격을 갖는 단위 작업이나 사업.
+                                    </p>
+                                </p>
+                            </div>
+                        </div>
+
+                        <p><b>실시간 검색어</b></p>
+                        <div class="realtime-wrap">
+                            <ul>
+                                <li><span class="number">1</span><span class="text">입추</span></li>
+                                <li><span class="number">2</span><span class="text">런닝맨 유재석</span></li>
+                                <li><span class="number">3</span><span class="text">런닝맨</span></li>
+                                <li><span class="number">4</span><span class="text">소나기</span></li>
+                                <li><span class="number">5</span><span class="text">주간 날씨</span></li>
+                                <li><span class="number">6</span><span class="text">깔라만시</span></li>
+                                <li><span class="number">7</span><span class="text">내 아이디는 강남미인</span></li>
+                                <li><span class="number">8</span><span class="text">차은우</span></li>
+                                <li><span class="number">9</span><span class="text">한국사능력검정시험</span></li>
+                                <li><span class="number">10</span><span class="text">맛있는 녀석들</span></li>
+                            </ul>
+                        </div>
+
+                        <p><b>쿠키 이용안내</b></p>
+                        <div class="cookie-wrap">
+                            <!-- <p><b>쿠키 이용안내</b></p> -->
+                            <ul>
+                                <li>웹툰 작품은 쿠키를 사용하여 대여/구매 하실 수 있습니다. </li>
+                                <li>쿠키 구매 시 지급되는 보너스 쿠키의 수량은 변경될 수 있으며, 유효기간은 지급 후 90일입니다. </li>
+                                <li>구매 후 7일 이내, 사용하지 않은 쿠키 패키지는 구매내역에서 직접 구매 취소할 수 있습니다. </li>
+                                <li>일부 사용 후 잔여 쿠키에 대한 구매 취소는 고객센터를 통해 가능하며, 쿠키 구매 시 지급된 보너스 쿠키를 사용한 경우에는 해당 분량을 제외하고 환불됩니다. </li>
+                                <li>쿠키 구매 또는 사용 전 이용약관 동의가 필요합니다. <br> 쿠키 이용약관</li>
+                            </ul>
+                        </div>
+
+                        <p><b>뉴스</b></p>
+                        <div class="news-wrap">
+                            <!-- <p><b>뉴스</b></p> -->
+                            <dl>
+                                <img src="img/thumbnail1.jpg">
+                                <dt class="title"><p>[날씨] 내일도 35도 안팎 폭염・내륙 소나기⋯습도 높아 후텁지근</p></dt>
+                                <dd class="content"><p>오늘은 입추 절기지만 가을은 아직 멀리있는 것 같습니다. 일부 내륙에는 소나기가 지났지만 소나기도 더위의 기세를 누그러뜨리진 못했는데요. 
+                                    동해안을 제외한 전국 대부분 지방에 폭염 특보가 이어지는 가운데 내일도 한낮에 서울과 대전 35도, 광주와 대구가 36도까지 오를 것으로 예상됩니다. 
+                                    내일도 대기가 불안정해지면서 오후에 내륙에는 소나기가 지나는 곳이 있겠습니다.</p></dd>
+                                <br>
+
+                                <dt class="title"><p>[펫카드] 강아지 중성화가 필요한 이유</p></dt>
+                                <dd class="content"><p>(서울=뉴스1) 최서윤 기자,방은영 디자이너 = 강아지 중성화 수술을 놓고 찬반이 팽팽하게 엇갈린다. 많은 사람들은 사람들과 공존하려면 개체수 조절을 위해 필요하다고 주장한다. 
+                                    그러나 어떤 사람들은 인위적인 수술은 안된다며 반대한다.</p></dd>
+                                <br>
+
+                                <img src="img/thumbnail1.jpg">
+                                <dt class="title"><p>다이어트에 좋은 여름 복숭아, 먹으면 안 되는 사람 있어</p></dt>
+                                <dd class="content"><p>복숭아가 제철이다. 여름 복숭아는 다양한 건강 효과를 낸다. 복숭아에는 포도당, 과당, 수분이 풍부하고 유기산(산성을 띠는 물질로 식품에서 신맛을 냄)이 0.
+                                    5% 정도로 적게 들어 단맛이 강하다. 복숭아의 열량은 100g당 36kcal다. 복숭아 한 개에 약 100kcal 정도다. 포만감에 비해 열량이 적은 편이어서 다이어트를
+                                    하는 사람에게도 좋다. 비타민이 많아서 피로 해소에 도움이 된다.</p></dd>
+                            </dl>
+                        </div>
+
+                        <p><b>웹툰</b></p>
+                        <div class="webtoon-wrap">
+                            <!-- <p><b>웹툰</b></p> -->
+                            <div>
+                                <img src="img/thumbnail2.jpg"> 
+                                <p class="title">하루 3컷</p>
+                                <p class="content">17화 편리하게 피곤하게</p>
+                            </div>
+                            
+                            <div>
+                                <img src="img/thumbnail2.jpg"> 
+                                <p class="title">유미의 세포들</p>
+                                <p class="content">326화 미래에서 온 텔레파시</p>
+                            </div>
+
+                            <div>
+                                <img src="img/thumbnail2.jpg"> 
+                                <p class="title">이말년씨리즈 2018</p>
+                                <p class="content">58화 공포의 떡볶이</p>
+                            </div>
+
+                            <div>
+                                <img src="img/thumbnail2.jpg"> 
+                                <p class="title">덴마</p>
+                                <p class="content">195화 1.다이크(195)</p>
+                            </div>
+
+                            <div>
+                                <img src="img/thumbnail2.jpg"> 
+                                <p class="title">1인용 기분</p>
+                                <p class="content">20화 평가</p>
+                            </div>
+
+                            <div>
+                                <img src="img/thumbnail2.jpg"> 
+                                <p class="title">찬란하지 않아도 괜찮아</p>
+                                <p class="content">56화 숨길 수 없어요.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </section>
+
+    <footer>
+        <div class="footer-address">주소: 경기도 성남시 분당구, E-MAIL: honggildong@naver.com</div>
+        <div class="footer-copyright">Copyright &copy; Hong Gil Dong. All Rights Reserved</div>
+    </footer>
+
+</body>
+
+</html>

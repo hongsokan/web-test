@@ -1,0 +1,450 @@
+@charset "utf-8";
+ 
+/* 모든 Device를 위한 공통 로드 */
+
+body {
+    font-family:  '나눔 고딕', 'NanumGothic', '돋움', 'Dotum', sans-serif;
+    margin: 0px;
+}
+
+/* body - header */
+body > header {
+    background-color: black;
+    height: 120px;
+    vertical-align: middle;
+}
+
+body > header .header-text {
+    color: white;
+    font-size: 40px;
+    line-height: 40px;
+}
+
+body .header-text, .contents {
+    max-width: 1000px;
+    padding: 40px;
+    margin: auto;
+}
+
+/* body - .contents - .menus */
+body .contents .menus {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+}
+
+.table-button, .form-button, .list-button {
+    background-color: transparent;
+    font: 16px #000;
+    border: 1px solid #d1d1d1;
+    height: 33px;
+    width: 324px;
+}
+
+.table-button:hover, .form-button:hover, .list-button:hover {
+    border-color: #454545;
+    font-weight: bold;
+}
+
+/* body - .contents - .elements-text */
+.elements-text {
+    height: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 20px;
+    border-bottom: 1px solid #454545;
+    margin-top: 40px;
+    padding-bottom: 20px;
+}
+ 
+/* body - .contents - contents-element(table,form,list) */
+.contents .contents-element {
+    border: 1px solid #d1d1d1;
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 30px;
+}
+
+/* body - .contents - .contents-header(table,form,list) - .contents-header */
+.contents .contents-header {
+    background-color: #f7f7f7;
+    height:100%;
+    font: 16px #333 bold;
+    line-height: 16px;
+    padding: 15px;
+    border-bottom: 1px solid #d1d1d1;
+}
+
+/* body - .contents - .contents-body(table,form,list) - .contents-body */
+.contents .contents-body {
+    font-size: 12px;
+    line-height: 12px;
+    padding: 30px;
+}
+
+/* body - .contents - .contents-body(.table-kids) */
+.table-kids > .table-title, .table-refund > .table-title {
+    font-size: 14px;
+    color: #000;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.table-kids {
+    border: 1px solid #e4e4e4;
+    border-collapse: collapse;
+    font-size: 12px;
+    color: #555;
+    width: 100%;
+    text-align: center;
+}
+
+.table-kids > tbody .table-category-row {
+    background-color: #fbfbfb;
+    font-weight: bold;
+}
+
+.table-kids > tbody .table-category-column {
+    font-weight: bold;
+}
+
+.table-kids > tbody tr,td {
+    border: 1px solid #e4e4e4;
+    padding: 10px;
+}
+
+/* body - .contents - .contents-body(.table-refund) */
+.table-refund {
+    font-size: 12px;
+    color: #555;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    border-collapse: collapse;
+    border-top: 2px solid #a5a5a5;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.table-refund > tbody .table-category-row, .table-total {
+    background-color: #fbfbfb;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.table-refund > tbody .table-total {
+    border-top: 1px solid #a5a5a5;
+    font-weight: bold;
+}
+
+.table-refund > tbody td {
+    border-style: none;
+}
+
+.table-refund > tbody .price {
+    text-align: right;
+    padding-right: 40px;
+}
+
+/* body - .contents - .contents-body(form) */
+.signup-title {
+    font-size: 14px;
+    color: #000;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.signup-form > form {
+    background-color: #fbfbfb;
+    border: 1px solid #e4e4e4;
+    padding: 20px;
+}
+
+.signup-form > form > p {
+    font-size: 14px;
+    color: #000;
+    font-weight: bold;
+}
+
+.signup-form > form > input, .greeting-text {
+    width: 95%;
+    border: 1px solid #e4e4e4;
+    font-size: 12px;
+    color: #000;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.signup-form .birth-wrap {
+    display: table;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.signup-form .birth-wrap .yy{
+    display: table-cell;
+    width: 30%;
+}
+
+.signup-form .birth-wrap .mm {
+    display: table-cell;
+    width: 30%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.signup-form .birth-wrap .dd {
+    display: table-cell;
+    width: 30%;
+}
+
+.signup-form .birth-wrap select {
+    width: 90%;
+    text-align: center;
+    display: inline-block;
+    border: 1px solid #e4e4e4;
+    font-size: 12px;
+    color: #000;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.signup-form .gender-wrap input {
+    margin-bottom: 15px;
+}
+
+.signup-form .gender-wrap span {
+    font-size: 12px;
+    margin-right: 30px;
+}
+
+.signup-form .phone-wrap {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.signup-form .phone {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #e4e4e4;
+    margin-right: 5%;
+}
+
+.signup-form .verify-button {
+    width: 20%;
+    height: 36px;
+    border: 1px solid #08a600;
+    background-color: #4ec53d;
+    font-size: 12px;
+    color: #fff;
+}
+
+.signup-form .hobby-wrap {
+    width: 90%;
+    font-size: 12px;
+    color: #000;
+    display: flex;
+    justify-content: space-between;
+}
+
+.signup-form .hobby-wrap span, #text {
+    font-size: 12px;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.signup-form .submit-button {
+    border: 1px solid #08a600;
+    background-color: #4ec53d;
+    font-size: 12px;
+    color: #fff;
+}
+
+/* body - .contents - .contents-body(list) */
+
+
+.list-wrap p {
+    font-size: 14px;
+    color: #000;
+}
+
+.list-wrap > div {
+    margin-bottom: 50px;
+}
+
+.search-wrap .search-result {
+    border: 1px solid #e4e4e4;
+    padding: 30px 15px;
+}
+
+.search-wrap .search-result .title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #000;
+    text-align: center;
+}
+
+.search-result .result-title {
+    font-size: 14px;
+    font-weight: bold;
+    color: #000;
+}
+
+.search-result .result-category {
+    font-size: 12px;
+    color: #559bfa;
+}
+
+.search-result .result-content {
+    font-size: 12px;
+    line-height: normal;
+}
+
+.realtime-wrap {
+    border: 1px solid #e4e4e4;
+    width: 20%;
+    justify-content: flex-start;
+}
+
+.realtime-wrap ul {
+    list-style: none;
+    padding-left: 10px;
+}
+
+.realtime-wrap ul li {
+    margin: 15px 10px;
+}
+
+.realtime-wrap .number {
+    width: 17px;
+    height: 17px;
+    border: 1px solid #e0e0e0;
+    font-size: 10px;
+    color: #666;
+    padding: 3px 5px;
+    margin-right: 10px;
+}
+
+.realtime-wrap .text {
+    font-size: 12px;
+    color: #000;
+}
+
+.realtime-wrap .text:hover {
+    text-decoration: underline;
+}
+
+.cookie-wrap {
+    border: 1px solid #e4e4e4;
+    padding: 10px 10px 10px 0px;
+}
+
+.cookie-wrap ul li {
+    margin-bottom: 10px;
+}
+
+.news-wrap {
+    border: 1px solid #e4e4e4;
+    padding: 20px;
+}
+
+.news-wrap img {
+    display: flex;
+    float: left;
+    margin-right: 10px;
+}
+
+.news-wrap .title p {
+    font-size: 14px;
+    font-weight: bold;
+    color: #00c;
+    text-decoration: underline;
+}
+
+.news-wrap .content {
+    margin-left: 0px;
+}
+
+.news-wrap .content p {
+    font-size: 12px;
+    color: #000;
+}
+
+.webtoon-wrap {
+    border: 1px solid #e4e4e4;
+    padding: 20px;
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+/* .webtoon-wrap img {
+    width: auto;
+    height: auto;
+    max-width: 285px;
+    max-height: 140px;
+} */
+
+.webtoon-wrap .title {
+    font-size: 14px;
+    font-weight: bold;
+    color: #000;
+    margin-top: 5px;
+}
+
+.webtoon-wrap .content {
+    font-size: 12px;
+    color: #000;
+}
+
+
+
+/* body -  footer*/
+body footer {
+    width: 100%;
+    border-top: 1px solid #d1d1d1;
+    border-top-width: 100%;
+    padding: 30px;
+}
+
+body footer div {
+    text-align: center;
+}
+
+body footer .footer-address {
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 6px;
+}
+
+body footer .footer-copyright {
+    font-size: 12px;
+    color: #000;
+}
+
+
+/* Mobile Device : 0 ~ 640 */
+@media screen and (max-width: 640px) {
+    .device-status {
+        /* background: red; */
+        width: 100%;
+    }
+
+}
+ 
+/* Tablet Device : 641 ~ 768 */
+@media screen and (min-width:641px) {
+    .device-status {
+        /* background: green; */
+        width:100%;
+    }
+
+}
+ 
+/* Desktop Device : 1024 이상 */
+@media screen and (min-width:1024px) {
+    .device-status {
+        /* background: blue; */
+        width: 100%;
+    }
+
+}
