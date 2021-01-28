@@ -1,0 +1,68 @@
+
+<!-- 
+// 웹페이지의 모든 요소의 처리가 끝났는지 알려주는 이벤트 load, DOMContentLoaded
+// 스크립트가 head에 위치하는 경우
+<html>
+    <head>
+        <script>
+        var t = document.getElementById('target');
+        console.log(t);    // null, p 태그가 로딩되기 전에 js 실행됐기 때문.
+        </script>
+    </head>
+    <body>
+        <p id="target">Hello</p>
+    </body>
+</html>
+ -->
+
+
+
+<!-- 
+// 스크립트를 문서 끝으로 위치
+<p id="target">Hello</p>
+<script>
+    var t = document.getElementById('target');
+    console.log(t);      // 스크립트를 문서 끝에 위치시켜 위 문제를 해결
+</script>
+ -->
+
+
+
+<!-- 
+// load
+<head>
+    <script>
+        window.addEventListener('load', function(){
+            var t = document.getElementById('target');
+            console.log(t);    // load 이벤트 이용도 가능
+        })
+    </script>
+</head>
+<body>
+    <p id="target">Hello</p>
+</body>
+// 그러나 load 이벤트는 문서 내 모든 리소스가 다운로드 되고 나서 실행. 구동 지연.
+// DOMContentLoaded는 문서에서 스크립트 작업을 할 수 있을 때 실행.
+ -->
+
+
+
+
+<!-- // DOMContentLoaded -->
+<html>
+    <head>
+        <script>
+            window.addEventListener('load', function(){
+                console.log('load');
+            })
+            window.addEventListener('DOMContentLoaded', function(){
+                console.log('DOMContentLoaded');
+            })
+        </script>
+    </head>
+    <body>
+        <p id="target">Hello</p>
+    </body>
+</html>
+
+

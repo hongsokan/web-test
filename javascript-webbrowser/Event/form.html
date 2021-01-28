@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- // submit -->
+    <form id="target1" action="result.html">
+        <label for="name">name</label> <input id="name1" type="name" />
+        <input type="submit" />
+    </form>
+    <script>
+        var t = document.getElementById('target1');
+        t.addEventListener('submit', function (event) {
+            if (document.getElementById('name1').value.length === 0) {
+                alert('Name 필드의 값이 누락 되었습니다');
+                event.preventDefault();    // name 필드에 값이 없으면 submit 이벤트 방지
+            }
+        });
+    </script>
+    <br><br>
+
+
+    <!-- // change -->
+    <p id="result2"></p>
+    <input id="target2" type="name" />
+    <script>
+        var t = document.getElementById('target2');
+        t.addEventListener('change', function (event) {
+            document.getElementById('result2').innerHTML = event.target.value;
+        });  // target인 텍스트필드에 입력하고 빠져나오는 순간, p 태그에 값을 입력한 값으로 변경
+    </script>
+    <br><br><br><br>
+
+
+    <!-- // blur, focus -->
+    <input id="target3" type="name" />
+    <script>
+        var t = document.getElementById('target3');
+        t.addEventListener('blur', function (event) { // target에서 빠져나오면 blur
+            alert('blur');
+        });
+        t.addEventListener('focus', function (event) { // target에 focus
+            alert('focus');
+        });
+    </script>
+</body>
+
+</html>
