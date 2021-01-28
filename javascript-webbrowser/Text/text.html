@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- Text 객체 -->
+    <p id="target1"><span>Hello world</span></p>
+    <p id="target2">
+        <span>Hello world</span>
+    </p>
+    <script>
+        var t1 = document.getElementById('target1').firstChild;
+        var t2 = document.getElementById('target2').firstChild;
+
+        console.log(t1.firstChild.nodeValue);
+        try {
+            console.log(t2.firstChild.nodeValue);
+        } catch (e) {
+            console.log(e);
+        }
+        console.log(t2.nextSibling.firstChild.nodeValue);
+
+    </script>
+    <br><br>
+
+    <!-- 값 API -->
+    <ul>
+        <li id="target3">html</li> 
+        <li>css</li>
+        <li>JavaScript</li>
+    </ul>
+    <script>
+        var t = document.getElementById('target3').firstChild;
+        console.log(t.nodeValue); // html
+        console.log(t.data);      // html
+    </script>
+</body>
+
+</html>
