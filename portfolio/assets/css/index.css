@@ -165,11 +165,12 @@ header .logo
   height: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; 
 }
 .menu ul
 {
   position: relative;
+  display: none;
 }
 .menu ul li
 {
