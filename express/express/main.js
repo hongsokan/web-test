@@ -1,11 +1,10 @@
 var express = require('express');
 var app = express();
 var fs = require('fs');
-var qs = require('querystring');
 var bodyParser = require('body-parser');
 var compression = require('compression');
-var template = require('./lib/template.js');
-
+// index ('/') 라우터
+var indexRouter = require('./routes/index')
 // create, update, delete, read 기능들의 라우터
 var topicRouter = require('./routes/topic');
 
@@ -26,24 +25,12 @@ app.use(function (request, response, next) {
   });
 })
 
+// '/'으로 시작하는 주소에 미들웨어 indexRouter 적용
+app.use('/', indexRouter);
 // '/topic' 으로 시작하는 주소들에 미들웨어 topicRouter 적용
 app.use('/topic', topicRouter);
 
-//route, routing
-//app.get('/', (req, res) => res.send('Hello World!'))
-app.get('/', function (request, response) {
-  var title = 'Welcome';
-  var description = 'Hello, Node.js';
-  var list = template.list(request.list);
-  var html = template.HTML(title, list,
-    `<h2>${title}</h2>${description}
-    <img src="/images/hello.jpg" style="width:300px; display:block">
-    `,
-    `<a href="/topic/create">create</a>`
-  );
-  response.send(html);
-});
-
+// 에러처리
 app.use(function(req, res, next) {
   res.status(404).send('Sorry cant find the page!');
 });
