@@ -3,10 +3,15 @@ var app = express();
 var fs = require('fs');
 var bodyParser = require('body-parser');
 var compression = require('compression');
+var helmet = require('helmet');
+
+app.use(helmet());
+
 // index ('/') 라우터
 var indexRouter = require('./routes/index')
 // create, update, delete, read 기능들의 라우터
 var topicRouter = require('./routes/topic');
+
 
 // 미들웨어 사용
 // 1. 정적 파일 제공하기 위한 express 기본 미들웨어 함수
