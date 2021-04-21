@@ -21,7 +21,7 @@ module.exports = {
     while(i < filelist.length){
       // express 적용 전 <a href="/?id=${filelist[i]}">
       // express 적용 후 변경된 주소 체계
-      list = list + `<li><a href="/page/${filelist[i]}">${filelist[i]}</a></li>`;
+      list = list + `<li><a href="/topic/${filelist[i]}">${filelist[i]}</a></li>`;
       i = i + 1;
     }
     list = list+'</ul>';
