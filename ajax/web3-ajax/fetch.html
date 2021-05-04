@@ -12,6 +12,16 @@
         })
       })
       */
+
+      
+      function callbackme() {
+        console.log('response end');
+      }
+      fetch('html').then(callbackme);
+      console.log(1);
+      console.log(2);
+
+
       //Asynchronous
       fetch('html').then(function(response){
         response.text().then(function(text){
