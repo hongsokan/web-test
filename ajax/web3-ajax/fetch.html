@@ -5,19 +5,43 @@
 
     </article>
     <input type="button" value="fetch" onclick="
+
       /*
+      // 익명함수 function(response){}
       fetch('html').then(function(response){
         response.text().then(function(text){
           document.querySelector('article').innerHTML = text;
         })
       })
       */
-      //Asynchronous
+
+      /*
+      // fetch api와 콜백함수의 비동기 처리 예제
+      function callbackme() {
+        console.log('response end');
+      }
+      fetch('html').then(callbackme);
+      console.log(1);
+      console.log(2);
+      */
+
+      
+      // Asynchronous
+      // response 객체의 프로퍼티 status를 통해 응답 상태 확인
       fetch('html').then(function(response){
-        response.text().then(function(text){
-          document.querySelector('article').innerHTML = text;
-        })
-      });
+        console.log('response end');
+        console.log(response.status);
+
+        if (response.status == '200') {
+          console.log('File is found')
+        }
+        else if (response.status == '404') {
+          alert('File Not found');
+        }
+      }); // 'html'파일이 존재하면 status는 200, 없으면 404
+      console.log(1);
+      console.log(2);
+      
     ">
   </body>
 </html>
